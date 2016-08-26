@@ -1,0 +1,10 @@
+<div>
+  <table data-ng-hide="pic.thumbnail">
+    <tbody>
+      <tr><th><a href='#/full/{{pic.id}}'>{{pic.title}}</a></th></tr>
+      <tr><td>{{pic.url}}</td></tr>
+      <tr><td>{{pic.description}}</td></tr>
+    </tbody>
+  </table>
+  <a href='#/full/{{pic.id}}'><img data-ng-show="pic.thumbnail" src="{{pic.url}}" height="100" width="100"/></a>
+</div>

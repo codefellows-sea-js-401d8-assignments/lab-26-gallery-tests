@@ -1,0 +1,10 @@
+<div>
+  <table data-ng-hide="dic.thumbnail">
+    <tbody>
+      <tr><th><a href='#/full/{{dic.id}}'>{{dic.title}}</a></th></tr>
+      <tr><td>{{dic.url}}</td></tr>
+      <tr><td>{{dic.description}}</td></tr>
+    </tbody>
+  </table>
+  <a href='#/full/{{dic.id}}'><img data-ng-show="dic.thumbnail" src="{{dic.url}}" height="100" width="100"/></a>
+</div>

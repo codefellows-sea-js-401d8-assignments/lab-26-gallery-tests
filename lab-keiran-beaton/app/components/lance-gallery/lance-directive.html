@@ -1,0 +1,9 @@
+<div>
+  <h2>{{lc.title}}</h2>
+  <ul>
+    <li data-ng-repeat="image in lc.imageGallery" data-kb-lance-image data-title="image.title" data-url="image.url" data-description="image.description" data-id="image.id" data-thumbnail="lc.thumbnail"></li>
+  </ul>
+  <p>{{lc.description}}</p>
+  <button data-ng-click="lc.showTable()">Text View</button>
+  <button data-ng-click="lc.showThumbnail()">Thumbnail View</button>
+</div>

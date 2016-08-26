@@ -1,0 +1,10 @@
+<div>
+  <table data-ng-hide="lic.thumbnail">
+    <tbody>
+      <tr><th><a href='#/full/{{lic.id}}'>{{lic.title}}</a></th></tr>
+      <tr><td>{{lic.url}}</td></tr>
+      <tr><td>{{lic.description}}</td></tr>
+    </tbody>
+  </table>
+  <a href='#/full/{{lic.id}}'><img data-ng-show="lic.thumbnail" src="{{lic.url}}" height="100" width="100"/></a>
+</div>
