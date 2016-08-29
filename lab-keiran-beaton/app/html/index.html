@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gallery App</title>
+    <link rel="stylesheet" href="bundle.css">
+    <script src="bundle.js"></script>
+  </head>
+  <body data-ng-app="galleryApp">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/">Image Display Views</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/paul"><i class="fa fa-home"></i>Paul Pierce Album</a></li>
+            <li><a href="#/lance"><i class="fa fa-picture-o"></i>Lance Stephenson Album</a></li>
+            <li><a href="#/dog"><i class="fa fa-picture-o"></i>Good Dog Album</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main data-ng-view>
+    </main>
+  </body>
+</html>

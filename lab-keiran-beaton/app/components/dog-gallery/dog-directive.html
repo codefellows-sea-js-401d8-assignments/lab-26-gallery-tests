@@ -1,0 +1,9 @@
+<div>
+  <h2>{{dc.title}}</h2>
+  <ul>
+    <li data-ng-repeat="image in dc.imageGallery" data-kb-dog-image data-title="image.title" data-url="image.url" data-description="image.description" data-id="image.id" data-thumbnail="dc.thumbnail"></li>
+  </ul>
+  <p>{{dc.description}}</p>
+  <button data-ng-click="dc.showTable()">Text View</button>
+  <button data-ng-click="dc.showThumbnail()">Thumbnail View</button>
+</div>

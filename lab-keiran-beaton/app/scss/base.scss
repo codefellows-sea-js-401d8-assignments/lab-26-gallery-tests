@@ -1,0 +1,28 @@
+@import 'vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import 'vendor/font-awesome-4.6.3/scss/font-awesome.scss';
+@import 'vendor/normalize-scss/sass/_normalize.scss';
+
+@import 'themes';
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: $kb-background;
+  color: $kb-text
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $kb-anotherColor;
+}
+
+img {
+  display: inline-block;
+}
+
+a {
+  color: $kb-anotherColor;
+  text-decoration: underline;
+}
