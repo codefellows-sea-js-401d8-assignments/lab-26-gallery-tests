@@ -1,0 +1,14 @@
+<div class="homepage" data-ng-init="album.findAlbumId()">
+  <a href="#/" class="float-left fa fa-arrow-left">
+    <p class="inline">Back</p>
+  </a>
+    <h1>{{album.currentAlbum.name}}</h1>
+    <h4>{{album.currentAlbum.description}}</h4>
+    <button class="fa fa-list" type="submit" data-ng-click="album.showcase()"> List View</button>
+    <button class="fa fa-th-large" type="submit" data-ng-click="album.showcase()"> Thumbnail View</button>
+    <div data-list data-ng-show="album.list">
+    </div>
+    <div data-thumb data-ng-show="album.thumbnail">
+    </div>
+
+</div>
