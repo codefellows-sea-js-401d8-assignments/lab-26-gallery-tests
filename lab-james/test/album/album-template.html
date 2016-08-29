@@ -9,7 +9,7 @@
 </div>
 
 <div class="thumbnail-content" ng-repeat="album in ac.album" ng-show="ac.album.viewThumbnail">
-  <h2 class="page-title"> {{ac.album.title}} </h2>
+  <h2 class="page-title"> {{album.title}} </h2>
   <a ng-repeat="image in album.images" ng-click="ac.showFullsize(image.id)" href="" class="thumbnail">
     <img ng-src="{{image.url}}" height="100" width="100" />
     <br />
