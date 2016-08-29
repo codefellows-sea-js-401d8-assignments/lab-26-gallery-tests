@@ -9,9 +9,9 @@ module.exports = function(app) {
       bindToController: true,
       template: require('./dog-directive.html'),
       scope: {
-        title: '=',
+        title: '@',
         imageGallery: '=',
-        description: '=',
+        description: '@',
         thumbnail: '='
       }
     };
