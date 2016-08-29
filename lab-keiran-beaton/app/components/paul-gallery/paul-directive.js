@@ -9,9 +9,9 @@ module.exports = function(app) {
       bindToController: true,
       template: require('./paul-directive.html'),
       scope: {
-        title: '=',
+        title: '@',
         imageGallery: '=',
-        description: '=',
+        description: '@',
         thumbnail: '='
       }
     };

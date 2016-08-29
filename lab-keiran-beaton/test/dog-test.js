@@ -25,7 +25,6 @@ describe('dog gallery components', function() {
     this.scope.$digest();
     expect(this.scope.thumbnail).toBe(false);
     imageGallery.find('button')[1].click();
-    imageGallery.triggerHandler('button');
     expect(this.scope.thumbnail).toBe(true);
   });
 });
