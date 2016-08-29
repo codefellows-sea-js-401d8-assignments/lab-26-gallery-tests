@@ -27,4 +27,10 @@ describe('dog gallery components', function() {
     imageGallery.find('button')[1].click();
     expect(this.scope.thumbnail).toBe(true);
   });
+
+  it('should have the proper information for each image', function() {
+    let imageGallery = this.compile(require('./dog-test.html'))(this.scope);
+    this.scope.$digest();
+    expect(imageGallery.find('a').text()).toBe(this.scope.gallery.map((image) => image.title).join(''));
+  });
 });
