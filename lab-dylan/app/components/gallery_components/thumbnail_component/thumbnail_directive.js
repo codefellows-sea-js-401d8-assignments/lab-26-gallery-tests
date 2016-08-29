@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.directive('dsThumbnailDirective', function() {
     return {
       template: require('./thumbnail_component.html'),
-      controller: 'AlbumController',
+      controller: 'GalleryController',
       controllerAs: 'ctrl',
       bindToController: true,
       scope: {

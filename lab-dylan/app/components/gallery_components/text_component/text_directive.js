@@ -1,17 +1,17 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('dsFullsizeDirective', function() {
+  app.directive('dsTextDirective', function() {
     return {
-      template: require('./fullsize_component.html'),
-      controller: 'AlbumController',
+      template: require('./text_component.html'),
+      controller: 'GalleryController',
       controllerAs: 'ctrl',
       bindToController: true,
       scope: {
         description: '@',
         url: '@',
         name: '@',
-        albumId: '=',
+        albumId: '@',
         id: '@'
       }
     };
