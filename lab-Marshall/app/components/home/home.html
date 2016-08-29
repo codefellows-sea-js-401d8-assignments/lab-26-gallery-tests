@@ -1,0 +1,13 @@
+<div class="list-group col-md-10  col-md-offset-6">
+  <ul>
+    <h2>Saitama Booru</h2>
+    <ul ng-repeat="list in hc.images">
+      <a href="#/fullsize/{{list.id}}" class="list-group-item">
+        <i class="fa fa-picture-o"></i>
+        <b>{{list.title}}</b> <br />
+      {{list.description}} <br />
+      </a>
+      <a href="{{list.url}}" class="list-group-item"><i class="fa fa-link"></i> Image Source</a>
+    </ul>
+  </ul>
+</div>

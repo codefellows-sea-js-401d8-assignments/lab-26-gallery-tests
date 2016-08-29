@@ -1,0 +1,20 @@
+
+<div>
+  <h1>Will the images display? : Thumbnail</h1>
+  <ul>
+    <div data-mmm-thumbnail-directive data-images="img.images"></div>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>Will the home display?</h1>
+  <div class="column" data-mmm-home-directive>
+  </div>
+</div>
+
+<div>
+  <h1>Fullsize: </h1>
+  <ul>
+    <div data-mmm-fullsize-directive data-url="{{img.images[1].url}}" id="{{img.image[0].id}}" description="{{img.image[0].description}}"></div>
+  </ul>
+</div>
