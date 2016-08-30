@@ -12,17 +12,13 @@ describe('list directive testing', function(){
   beforeEach(angular.mock.inject(function($rootScope, $compile){
     this.compile = $compile;
     this.scope = $rootScope.$new();
-    this.scope.albums = [{name: 1}, {name: 2}, {name:3}];
-    this.scope.whichPic = 2;
-    this.scope.currentAlbum = this.scope.albums[2];
-    this.scope.currentAlbum.pics = [{name: 'test1'}, {name: 'test2'}, {name: 'test3'}, {name: 'test4'}];
   }));
 
   it('should display a listing of photos', function(){
     let list = this.compile(require('./list-test.html'))(this.scope);
     this.scope.$digest();
     expect(list.find('h3:nth-of-type(3)').text()).toBe('test3');
-    expect(list.find('a').length).toBe(this.scope.currentAlbum.pics.length);
+    expect(list.find('a').length).toBe(8);
   });
 
 });
