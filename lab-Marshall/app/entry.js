@@ -26,16 +26,16 @@ demoApp.config(['$routeProvider', function($route) {
       controller: 'GalleryController',
       controllerAs: 'gc'
     })
-    // .when('/gallery2', {
-    //   template: require('./html/gallery.html'),
-    //   controller: 'ImgControllerTwo',
-    //   controllerAs: 'img'
-    // })
-    // .when('/gallery3', {
-    //   template: require('./html/gallery.html'),
-    //   controller: 'ImgControllerThree',
-    //   controllerAs: 'img'
-    // })
+    .when('/gallery2', {
+      template: require('./html/gallery2.html'),
+      controller: 'GalleryController2',
+      controllerAs: 'gc2'
+    })
+    .when('/gallery3', {
+      template: require('./html/gallery3.html'),
+      controller: 'GalleryController3',
+      controllerAs: 'gc3'
+    })
     .when('/fullsize/:id', {
       template: require('./html/fullsize.html'),
       controller: 'FullsizeController',
