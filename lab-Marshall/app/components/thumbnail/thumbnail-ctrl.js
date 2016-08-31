@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(demoApp){
-  demoApp.controller('ThumbnailController', function(){
+  demoApp.controller('ThumbDirectiveController', function(){
     // this.images = this.images || 'No thumbnail found!';
   });
 };

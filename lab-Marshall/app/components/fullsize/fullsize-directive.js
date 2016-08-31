@@ -4,8 +4,8 @@ module.exports = function(demoApp){
   demoApp.directive('mmmFullsizeDirective', function(){
     return {
       template: require('./fullsize.html'),
-      controller: 'FullsizeController',
-      controllerAs: 'fs',
+      controller: 'FullsizeDirectiveController',
+      controllerAs: 'fds',
       bindToController: true,
       scope: {
         title: '@',

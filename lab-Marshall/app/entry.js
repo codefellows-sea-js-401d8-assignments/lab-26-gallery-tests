@@ -13,23 +13,38 @@ demoApp.config(['$routeProvider', function($route) {
   $route
     .when('/', {
       template: require('./html/home.html'),
-      controller: 'ImgController',
-      controllerAs: 'img'
+      controller: 'HomeController',
+      controllerAs: 'hc'
     })
     .when('/thumbnail', {
       template: require('./html/thumbnail.html'),
-      controller: 'ImgController',
-      controllerAs: 'img'
+      controller: 'ThumbController',
+      controllerAs: 'tc'
     })
+    .when('/gallery', {
+      template: require('./html/gallery.html'),
+      controller: 'GalleryController',
+      controllerAs: 'gc'
+    })
+    // .when('/gallery2', {
+    //   template: require('./html/gallery.html'),
+    //   controller: 'ImgControllerTwo',
+    //   controllerAs: 'img'
+    // })
+    // .when('/gallery3', {
+    //   template: require('./html/gallery.html'),
+    //   controller: 'ImgControllerThree',
+    //   controllerAs: 'img'
+    // })
     .when('/fullsize/:id', {
       template: require('./html/fullsize.html'),
-      controller: 'ImgController',
-      controllerAs: 'img'
+      controller: 'FullsizeController',
+      controllerAs: 'fsc'
     })
     .when('/fulldisplay', {
       template: require('./html/fullDisplay.html'),
-      controller: 'ImgController',
-      controllerAs: 'img'
+      controller: 'FullDisplayController',
+      controllerAs: 'fdc'
     })
     .otherwise({
       redirecTo: '/'
