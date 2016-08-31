@@ -1,10 +1,11 @@
-<div class="list-group col-md-10 col-md-offset-6">
-  <table ng-hide="gic.thumbnail">
-    <tbody>
-      <tr class="list-group-item"><th><i class="fa fa-picture-o"></i><a href='#/fullsize/{{gic.id}}'>{{gic.title}}</a></th></tr>
-      <tr class="list-group-item"><td><a href="{{gic.url}}">Image Source</a></td></tr>
-      <tr class="list-group-item"><td>{{gic.description}}</td></tr>
-    </tbody>
-  </table>
-  <a class="list-group-item" href='#/fullsize/{{gic.id}}'><img ng-show="gic.thumbnail" src="{{gic.url}}" height="100" width="100"/></a>
+<div class="list-group col-md-10  col-md-offset-6">
+    <ul ng-hide="gic.thumbnail">
+      <a href="#/fullsize/{{gic.id}}" class="list-group-item">
+        <i class="fa fa-picture-o"></i>
+        <b>{{gic.title}}</b> <br />
+      {{gic.description}} <br />
+      </a>
+      <a href="{{gic.url}}" class="list-group-item"><i class="fa fa-link"></i> Image Source</a>
+    </ul>
+    <a href='#/fullsize/{{gic.id}}'><img class="list-group-item" ng-show="gic.thumbnail" src="{{gic.url}}" height="150" width="150"/></a>
 </div>
