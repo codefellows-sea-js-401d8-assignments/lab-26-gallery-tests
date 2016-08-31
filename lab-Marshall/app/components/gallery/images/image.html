@@ -1,10 +1,10 @@
-<div>
+<div class="list-group col-md-10 col-md-offset-6">
   <table ng-hide="gic.thumbnail">
     <tbody>
-      <tr><th><a href='#/full/{{gic.id}}'>{{gic.title}}</a></th></tr>
-      <tr><td>{{gic.url}}</td></tr>
-      <tr><td>{{gic.description}}</td></tr>
+      <tr class="list-group-item"><th><i class="fa fa-picture-o"></i><a href='#/fullsize/{{gic.id}}'>{{gic.title}}</a></th></tr>
+      <tr class="list-group-item"><td><a href="{{gic.url}}">Image Source</a></td></tr>
+      <tr class="list-group-item"><td>{{gic.description}}</td></tr>
     </tbody>
   </table>
-  <a href='#/fullsize/{{gic.id}}'><img ng-show="gic.thumbnail" src="{{gic.url}}" height="100" width="100"/></a>
+  <a class="list-group-item" href='#/fullsize/{{gic.id}}'><img ng-show="gic.thumbnail" src="{{gic.url}}" height="100" width="100"/></a>
 </div>
