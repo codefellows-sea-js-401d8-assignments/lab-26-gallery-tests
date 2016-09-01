@@ -1,0 +1,7 @@
+<div data-ng-repeat="album in home.albums" class="col-md-12">
+    <a class="homepage list-group-item" href="#/album/{{album.galleryId}}">
+      <img  ng-src="{{album.thumb}}" height="200" width="200" />
+        <h4>{{album.name}}</h4>
+        <h7>{{album.description}}</h7>
+    </a>
+</div>

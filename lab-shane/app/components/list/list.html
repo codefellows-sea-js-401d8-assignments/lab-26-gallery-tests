@@ -1,0 +1,6 @@
+<div data-ng-init="album.findAlbumId()">
+    <a data-ng-repeat="pic in album.currentAlbum.pics" href="#/album/{{album.galleryId}}/full/{{pic.fullId}}" class="list-group-item">
+        <h3>{{pic.name}}</h3>
+        <h5>{{pic.description}}</h5>
+    </a>
+</div>

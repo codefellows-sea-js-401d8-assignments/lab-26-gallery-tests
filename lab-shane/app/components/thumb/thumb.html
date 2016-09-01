@@ -1,0 +1,8 @@
+<div data-ng-init="album.findAlbumId()">
+    <div data-ng-repeat="pic in album.currentAlbum.pics" class="thumbnail col-xs-2">
+        <a href="#/album/{{album.galleryId}}/full/{{pic.fullId}}" class="thumbnail">
+            <img ng-src="{{pic.location}}" height="100" width="100" />
+            <!-- <h10>{{pic.name}}</h10> -->
+        </a>
+    </div>
+</div>
