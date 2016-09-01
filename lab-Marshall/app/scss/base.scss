@@ -1,0 +1,28 @@
+// vendor styles
+@import "vendor/normalize/_normalize.scss";
+@import "vendor/bootstrap/stylesheets/_bootstrap.scss";
+@import "vendor/font-awesome/scss/font-awesome.scss";
+@include normalize();
+// app styles
+@import "_theme";
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $app-dark;
+}
+
+.brand {
+  font-size: 1em;
+}
+
+hr {
+  border-top: 1px solid $app-default;
+}
+
+h1, h2 {
+  color: $app-default;
+}
