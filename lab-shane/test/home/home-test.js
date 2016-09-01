@@ -19,11 +19,16 @@ describe('testing testApp', function() {
   }));
 
   it('home directive should populate 3 galleries', function() {
-    let home = this.compile(require('./home-test.html'))(this.scope);
+    let home = this.compile('<home-view></home>')(this.scope);
     this.scope.$digest();
-
-    expect(home.find('h4').length).toBe(3);
+    expect(home.find('a').attr('href')).toBe('#/album/0');
+    expect(home.find('a').length).toBe(3);
+    expect(home.find('img').attr('src').slice(12,20)).toBe('buzzfeed');
+    expect(home.find('img').length).toBe(3);
     expect(home.find('h4').text().slice(0, 5)).toBe('Drake');
+    expect(home.find('h4').length).toBe(3);
+    expect(home.find('h4').text().slice(0,11)).toBe('Drake Memes');
+    expect(home.find('h7').length).toBe(3);
   });
 
 });
