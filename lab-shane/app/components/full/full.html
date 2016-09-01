@@ -1,8 +1,8 @@
 <div class="homepage" data-ng-init="album.findAlbumId()">
-    <a href="#/album/{{album.whichAlbum}}" class="float-left fa fa-arrow-left">
+    <a href="#/album/{{album.galleryId}}" class="float-left fa fa-arrow-left">
         <p class="inline">Back</p>
     </a>
-    <h1>{{album.currentAlbum.pics[album.whichPic].name}}</h1>
-    <img ng-src="{{album.currentAlbum.pics[album.whichPic].location}}" height="400" width="400" />
-    <h4>{{album.currentAlbum.pics[album.whichPic].description}}</h4>
+    <h1>{{album.currentAlbum.pics[album.fullId].name}}</h1>
+    <img ng-src="{{album.currentAlbum.pics[album.fullId].location}}" height="400" width="400" />
+    <h4>{{album.currentAlbum.pics[album.fullId].description}}</h4>
 </div>

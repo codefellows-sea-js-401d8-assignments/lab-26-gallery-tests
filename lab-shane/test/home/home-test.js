@@ -24,7 +24,6 @@ describe('testing testApp', function() {
 
     expect(home.find('h4').length).toBe(3);
     expect(home.find('h4').text().slice(0, 5)).toBe('Drake');
-    console.log(this.scope);
   });
 
 });
