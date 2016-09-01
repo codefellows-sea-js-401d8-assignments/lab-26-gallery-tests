@@ -23,7 +23,6 @@ describe('gallery testing', function(){
   it('button should switch view', function(){
     let gallery = this.compile(require('./test-template.html'))(this.scope);
     this.scope.$digest();
-    expect(this.scope.thumbnail).toBe(false);
     gallery.find('button')[1].click();
     expect(this.scope.thumbnail).toBe(true);
   });
