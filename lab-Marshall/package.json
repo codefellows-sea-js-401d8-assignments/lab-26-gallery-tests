@@ -1,11 +1,11 @@
 {
-  "name": "ng-template",
+  "name": "lab-marshall",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "test": "karama start"
+    "test": "karma start"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +37,7 @@
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
-    "karma-webpack": "^1.8.0"
+    "karma-webpack": "^1.8.0",
+    "watchify": "^3.7.0"
   }
 }

@@ -31,7 +31,7 @@ if (production){
 }
 
 module.exports = {
-  entry: `${__dirname}/app/entry.js`,
+  entry: `${__dirname}/app`,
   debug: !production,
   devtool: production ? false : 'eval',
   plugins: plugins,
@@ -75,13 +75,13 @@ module.exports = {
         test: /\.woff.*/,
         loader: 'file?name=fonts/[name].[ext]',
       },
-      { 
+      {
         test: /\.[ot]tf.*/,
-        loader: 'url?limit=10000&mimetype=application/octet-stream&name=fonts/[name].[ext]' 
+        loader: 'url?limit=10000&mimetype=application/octet-stream&name=fonts/[name].[ext]'
       },
       {
-        test: /\.eot.*/, 
-        loader: 'url?limit=10000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]' 
+        test: /\.eot.*/,
+        loader: 'url?limit=10000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]'
       }
     ],
   },
