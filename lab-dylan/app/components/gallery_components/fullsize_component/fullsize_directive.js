@@ -1,18 +1,17 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('dsFullsizeDirective', function() {
+  app.directive('dsFullsize', function() {
     return {
       template: require('./fullsize_component.html'),
-      controller: 'GalleryController',
+      controller: 'FullsizeController',
       controllerAs: 'ctrl',
       bindToController: true,
+      require: '^dsGallery',
       scope: {
-        description: '@',
-        url: '@',
-        name: '@',
-        albumId: '=',
-        id: '@'
+        album: '=',
+        albumId: '@',
+        Id: '@'
       }
     };
   });

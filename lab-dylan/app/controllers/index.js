@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = function(app) {
-  require('./album_controller')(app);
+  require('./gallery_controller')(app);
 };

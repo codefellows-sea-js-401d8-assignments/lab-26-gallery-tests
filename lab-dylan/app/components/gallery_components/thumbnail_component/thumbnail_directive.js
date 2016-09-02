@@ -1,18 +1,24 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('dsThumbnailDirective', function() {
+  app.directive('dsThumbnail', function() {
     return {
-      template: require('./thumbnail_component.html'),
-      controller: 'GalleryController',
+      controller: 'ThumbnailController',
       controllerAs: 'ctrl',
       bindToController: true,
+      template: require('./thumbnail_component.html'),
+      require: '^dsGallery',
       scope: {
-        description: '@',
-        url: '@',
-        name: '@',
-        albumId: '@',
-        id: '@'
+        album: '=',
+        albums: '=',
+        // description: '@',
+        // url: '@',
+        // name: '@',
+        // albumId: '@',
+        // id: '@'
+      },
+      link: function($scope, $elem, $attr, $controller) {
+        $scope.ctrl.toggle = $controller.toggle;
       }
     };
   });

@@ -9,8 +9,13 @@ require('./components')(demoApp);
 demoApp.config(['$routeProvider', function($route) {
   $route.when('/home', {
     template: require('./html/home.html'),
-    controller: 'GalleryController',
-    controllerAs: 'gc'
+    controller: 'DemoController',
+    controllerAs: 'dc'
+  })
+  .when('/images/:galleryId/fullsize/:id', {
+    template: require('./components/gallery_components/fullsize_component/fullsize_component.html'),
+    controller: 'FullsizeController',
+    controllerAs: 'ctrl'
   })
   .otherwise({
     redirectTo: '/home'

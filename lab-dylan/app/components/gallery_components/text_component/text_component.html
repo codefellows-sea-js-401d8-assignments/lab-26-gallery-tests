@@ -1,3 +1,9 @@
 <div class="container">
-  <a href="{{ctrl.url}}">{{ctrl.description}}</a>
+  <h4>{{ctrl.album.albumName}}</h4>
+  <ul>
+    <li ng-repeat="image in ctrl.album.images">
+      <a href="#/images/image.albumId/fullsize/image.id">{{image.name}}: {{image.description}}</a>
+    </li>
+
+  </ul>
 </div>

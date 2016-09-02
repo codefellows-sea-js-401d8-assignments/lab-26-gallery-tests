@@ -1,7 +1,9 @@
 <div class="container">
+  <h2>{{ctrl.album.albumName}}</h2>
   <ul>
-    <li ng-repeat="album in ctrl.albums">
-      <img ng-src="{{ctrl.url}}" height="100" width="100" />
+    <li ng-repeat="image in ctrl.album.images">
+      <img ng-src="{{image.url}}" height="100" width="100" />
     </li>
   </ul>
+
 </div>

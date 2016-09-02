@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('FullsizeComponentController', function() {
-    this.description = this.description || 'no description';
-    this.url = this.url || 'no link';
+  app.controller('FullsizeController', function() {
+    this.imgUrl = .albums[$routeParams.albumId].images[$routeParams.id].url;
+    this.imgDescription = $scope.albums[$routeParams.albumId].images[$routeParams.id].description;
+
   });
 };

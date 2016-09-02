@@ -1,18 +1,19 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('dsAlbumDirective', function() {
+  app.directive('dsGallery', function() {
     return {
-      controller: 'AlbumController',
+      controller: 'GalleryController',
       controllerAs: 'ctrl',
       bindToController: true,
-      template: require('./album_component.html'),
+      template: require('./gallery_component.html'),
       scope: {
-        name: '@',
-        url: '@',
-        description: '@',
-        albumId: '@',
-        id: '@'
+        toggleText: '=',
+        albums: '='
+        // url: '@',
+        // description: '@',
+        // albumId: '@',
+        // id: '@'
       }
     };
   });
