@@ -1,0 +1,8 @@
+<div>
+  <button ng-init="ctrl.toggleText" data-ng-click="ctrl.toggle()">{{ctrl.toggleText}}</button>
+  <div data-ng-repeat="album in ctrl.albums" data-ds-text data-album="album" ng-if="ctrl.showList" data-ng-click="ctrl.toggleFullsize()"></div>
+  <div data-ng-repeat="album in ctrl.albums" data-ds-thumbnail data-album="album" ng-if="ctrl.showThumbnails"></div>
+  <div data-ds-fullsize ng-if="ctrl.showFullsize" data-albums="ctrl.albums"></div>
+
+
+</div>
