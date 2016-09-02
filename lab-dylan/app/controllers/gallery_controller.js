@@ -47,6 +47,7 @@ module.exports = function(app) {
     this.albumId = Number.parseInt($routeParams.albumId);
     this.imageId = Number.parseInt($routeParams.id);
 
+    // Possibly for testing only
     this.albumIdVerify = function(albumId) {
       if (albumId < 0) return false;
       if (isNaN(albumId)) return false;
@@ -56,6 +57,7 @@ module.exports = function(app) {
     };
 
 
+    // Possibly for testing only
     this.imageIdVerify = function(id) {
       if (id < 0) return false;
       if (isNaN(id)) return false;
@@ -64,16 +66,16 @@ module.exports = function(app) {
       return true;
     };
 
+    // Possibly for testing only
     this.getAlbumId = function() {
       if (!this.albumIdVerify(this.albumId)) $location.path('./error');
       this.currentAlbum = this.albums[this.galleryId];
     };
 
+    // Possibly for testing only
     this.getImageId = function() {
       if(!this.imageIdVerify(this.imageId)) $location.path('./error');
       this.currentImage = this.albums[this.galleryId].images[this.imageId];
     };
-
-    // this.imageUrl = this.albums[this.galleryId].images[this.imageId].url;
   }]);
 };
