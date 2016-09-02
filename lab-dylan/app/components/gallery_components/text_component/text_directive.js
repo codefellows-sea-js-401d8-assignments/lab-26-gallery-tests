@@ -4,16 +4,17 @@ module.exports = function(app) {
   app.directive('dsText', function() {
     return {
       template: require('./text_component.html'),
-      controller: 'TextController',
+      controller: 'GalleryController',
       controllerAs: 'ctrl',
       require: '^dsGallery',
       bindToController: true,
       scope: {
         album: '=',
-        albums: '='
+        // albums: '@'
       },
       link: function($scope, $elem, $attr, $controller) {
         $scope.ctrl.toggle = $controller.toggle;
+        $scope.ctrl.toggleFullsize = $controller.toggleFullsize;
       }
     };
   });

@@ -8,12 +8,16 @@ module.exports = function(app) {
       bindToController: true,
       template: require('./gallery_component.html'),
       scope: {
-        toggleText: '=',
+        toggleText: '@',
         albums: '='
         // url: '@',
         // description: '@',
         // albumId: '@',
         // id: '@'
+      },
+      link: function($scope, $elem, $attr, $controller) {
+        $scope.ctrl.toggle = $controller.toggle;
+        $scope.ctrl.toggleFullsize = $controller.toggleFullsize;
       }
     };
   });

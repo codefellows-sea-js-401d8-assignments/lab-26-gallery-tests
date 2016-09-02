@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('GalleryController', function() {
+  app.controller('GalleryComponentController', function() {
     this.toggle = function() {
       if (this.toggleText === 'Grid') {
         this.toggleText = 'Table';

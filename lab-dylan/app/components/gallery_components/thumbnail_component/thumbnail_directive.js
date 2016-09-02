@@ -3,14 +3,13 @@
 module.exports = function(app) {
   app.directive('dsThumbnail', function() {
     return {
-      controller: 'ThumbnailController',
+      controller: 'GalleryController',
       controllerAs: 'ctrl',
       bindToController: true,
       template: require('./thumbnail_component.html'),
       require: '^dsGallery',
       scope: {
-        album: '=',
-        albums: '=',
+        album: '='
         // description: '@',
         // url: '@',
         // name: '@',
@@ -19,6 +18,7 @@ module.exports = function(app) {
       },
       link: function($scope, $elem, $attr, $controller) {
         $scope.ctrl.toggle = $controller.toggle;
+        $scope.ctrl.toggleFullsize = $controller.toggleFullsize;
       }
     };
   });
