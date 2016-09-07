@@ -16,6 +16,12 @@ demoApp.config(['$routeProvider', function($route) {
       controller: 'HomeController',
       controllerAs: 'hc'
     })
+    .when('/signup', {
+      template: require('./html/sign-up.html')
+    })
+    .when('/signin', {
+      template: require('./html/sign-in.html')
+    })
     .when('/thumbnail', {
       template: require('./html/thumbnail.html'),
       controller: 'ThumbController',

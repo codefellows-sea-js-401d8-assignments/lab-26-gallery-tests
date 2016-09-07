@@ -31,7 +31,7 @@ if (production){
 }
 
 module.exports = {
-  entry: `${__dirname}/app`,
+  entry: `${__dirname}/app/entry.js`,
   debug: !production,
   devtool: production ? false : 'eval',
   plugins: plugins,

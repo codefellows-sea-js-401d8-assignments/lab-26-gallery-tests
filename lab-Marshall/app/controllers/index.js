@@ -8,4 +8,5 @@ module.exports = function(demoApp){
   require('./images')(demoApp);
   require('./images2')(demoApp);
   require('./images3')(demoApp);
+  require('./auth-controller')(demoApp);
 };
