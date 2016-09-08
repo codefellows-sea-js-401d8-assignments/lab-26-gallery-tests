@@ -18,6 +18,7 @@ const authRouter = require('./router/auth_router');
 const app = express();
 const port = process.env.PORT || 3000;
 const mongoDbUri = process.env.MONGODB_URI || 'mongodb://localhost/notedev';
+process.env.APP_SECRET = 'secret';
 
 // module logic
 mongoose.Promise = Promise;

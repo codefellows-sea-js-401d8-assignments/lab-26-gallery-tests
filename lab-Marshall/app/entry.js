@@ -9,6 +9,17 @@ const demoApp = angular.module('demoApp', [require('angular-route')]);
 require('./controllers')(demoApp);
 require('./components')(demoApp);
 
+demoApp.run(['$rootScope', ($rs) => {
+  $rs.baseUrl = `${__API_URL__}`;
+  $rs.displayUrl = $rs.baseUrl + '/api/fulldisplay';
+  $rs.displayHttpConfig = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept-Content': 'application/json'
+    }
+  };
+}]);
+
 demoApp.config(['$routeProvider', function($route) {
   $route
     .when('/', {
@@ -19,8 +30,8 @@ demoApp.config(['$routeProvider', function($route) {
     .when('/signup', {
       template: require('./html/sign-up.html')
     })
-    .when('/signin', {
-      template: require('./html/sign-in.html')
+    .when('/login', {
+      template: require('./html/log-in.html')
     })
     .when('/thumbnail', {
       template: require('./html/thumbnail.html'),

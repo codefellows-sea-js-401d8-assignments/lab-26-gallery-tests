@@ -20,7 +20,7 @@ authRouter.post('/signup', jsonParser, (req, res, next) => {
     }, ErrorHandler(500, next, 'Server Error'));
 });
 
-authRouter.get('/signin', BasicHTTP, (req, res, next) => {
+authRouter.get('/login', BasicHTTP, (req, res, next) => {
   let authError = ErrorHandler(401, next, 'Authentication failed.');
   User.findOne({'basic.email': req.auth.username})
     .then((user) => {

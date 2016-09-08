@@ -6,5 +6,5 @@ module.exports = function(demoApp){
   require('./thumbnail')(demoApp);
   require('./gallery')(demoApp);
   require('./sign-up')(demoApp);
-  require('./sign-in')(demoApp);
+  require('./log-in')(demoApp);
 };

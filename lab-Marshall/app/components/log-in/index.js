@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = (demoApp) => {
-  demoApp.component('signUp', {
+  demoApp.component('logIn', {
     controller: 'AuthController',
-    template: require('./sign-up.html'),
+    template: require('./log-in.html'),
     bindings: {
       baseUrl: '<'
     }
