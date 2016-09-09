@@ -1,7 +1,7 @@
 'use strict';
 //
 module.exports = function(demoApp){
-  demoApp.controller('HomeController', ['$routeParams', '$location', function($routeParams, $location){
+  demoApp.controller('HomeController', ['$routeParams', '$location', 'auth', function($routeParams, $location, auth){
     this.images = [{
       id: 1,
       url: 'http://vignette1.wikia.nocookie.net/onepunchman/images/1/18/Slider_dos.png/revision/latest/scale-to-width-down/670?cb=20130220223313',
@@ -23,6 +23,8 @@ module.exports = function(demoApp){
       title: 'Saitama 4',
       description: 'Fourth saitama image'
     }];
+
+    this.token = auth.getToken();
 
     this.image = {};
 

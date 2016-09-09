@@ -19,7 +19,6 @@ module.exports = function(app) {
       getUser: function() {
         let token = this.getToken();
         if (!token) return;
-        if (token) new Error ('You are already logged in to a different account');
         let decoded = jwt.decodeToken(token);
         this.currentUser.username = decoded.username;
         return this.currentUser;

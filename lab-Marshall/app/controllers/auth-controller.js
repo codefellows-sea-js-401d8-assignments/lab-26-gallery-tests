@@ -11,7 +11,8 @@ module.exports = function(demoApp) {
           $http.defaults.headers.common['Authorization'] = 'Bearer ' + res.data.token;
           $location.path('/fulldisplay');
         }, (res, err) => {
-          alert('You already have an account');
+          alert('You already have an account, please sign in!');
+          $location.path('/login');
           console.log(err);
         });
     };
@@ -28,7 +29,7 @@ module.exports = function(demoApp) {
           auth.setToken(res.data.token);
           $location.path('/fulldisplay');
         }, (err) => {
-          alert('You are already logged in!');
+          alert('Wrong user and pass!');
           console.log(err);
         });
     };
