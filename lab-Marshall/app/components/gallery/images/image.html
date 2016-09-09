@@ -1,0 +1,11 @@
+<div class="list-group col-md-10  col-md-offset-6">
+    <ul ng-hide="gic.thumbnail">
+      <a href="#/fullsize/{{gic.id}}" class="list-group-item">
+        <i class="fa fa-picture-o"></i>
+        <b>{{gic.title}}</b> <br />
+      {{gic.description}} <br />
+      </a>
+      <a href="{{gic.url}}" class="list-group-item"><i class="fa fa-link"></i> Image Source</a>
+    </ul>
+    <a href='#/fullsize/{{gic.id}}'><img class="list-group-item" ng-show="gic.thumbnail" src="{{gic.url}}" height="150" width="150"/></a>
+</div>

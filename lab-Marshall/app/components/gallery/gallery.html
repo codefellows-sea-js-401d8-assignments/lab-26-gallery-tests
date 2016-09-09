@@ -1,0 +1,11 @@
+<div>
+  <h2>{{gbc.title}}</h2>
+
+  <ul data-ng-repeat="image in gbc.imageGallery" data-mmm-gallery-image-directive data-title="image.title" data-url="image.url" data-description="image.description" data-id="image.id" data-thumbnail="gbc.thumbnail"></ul>
+
+  <button data-ng-click="gbc.showTable()">Text View</button>
+  <button data-ng-click="gbc.showThumb()">Thumbnail View</button>
+
+  <button><a href="#/">Back Button</a></button>
+
+</div>
