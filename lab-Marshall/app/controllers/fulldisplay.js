@@ -1,7 +1,7 @@
 'use strict';
 //
 module.exports = function(demoApp){
-  demoApp.controller('FullDisplayController', ['$routeParams', '$location', function($routeParams, $location){
+  demoApp.controller('FullDisplayController', ['$routeParams', '$http', '$location', 'auth', function($routeParams, $http, $location, auth){
     this.images = [{
       id: 1,
       url: 'http://vignette1.wikia.nocookie.net/onepunchman/images/1/18/Slider_dos.png/revision/latest/scale-to-width-down/670?cb=20130220223313',
@@ -65,6 +65,8 @@ module.exports = function(demoApp){
     }];
 
     this.image = {};
+
+    this.token = auth.getToken();
 
     this.isValidId = function(id){
       if (isNaN(id)) return false;

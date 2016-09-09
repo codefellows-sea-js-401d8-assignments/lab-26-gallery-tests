@@ -4,8 +4,9 @@ require('!!file?name=[name].[ext]!./html/index.html');
 require('./scss/base.scss');
 
 const angular = require('angular');
-const demoApp = angular.module('demoApp', [require('angular-route')]);
+const demoApp = angular.module('demoApp', [require('angular-route'), require('angular-jwt')]);
 
+require('./services')(demoApp);
 require('./controllers')(demoApp);
 require('./components')(demoApp);
 
@@ -32,6 +33,9 @@ demoApp.config(['$routeProvider', function($route) {
     })
     .when('/login', {
       template: require('./html/log-in.html')
+    })
+    .when('/deletetoken', {
+      template: require('./html/delete-token.html')
     })
     .when('/thumbnail', {
       template: require('./html/thumbnail.html'),

@@ -7,4 +7,5 @@ module.exports = function(demoApp){
   require('./gallery')(demoApp);
   require('./sign-up')(demoApp);
   require('./log-in')(demoApp);
+  require('./delete-token')(demoApp);
 };
