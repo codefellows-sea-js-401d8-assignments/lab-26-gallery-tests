@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('ImageController', ['$rootScope', '$routeParams', function($rootScope, $rp){
-    this.images = [require('../data/bunnies'), require('../data/boxers'), require('../data/terriers')];;
+  app.controller('ImageController', ['$rootScope', '$routeParams', '$location', 'auth', function($rootScope, $rp, $location, auth){
+    this.images = [require('../data/bunnies'), require('../data/boxers'), require('../data/terriers')];
 
     let location = $rp.id;
 
@@ -23,6 +23,10 @@ module.exports = function(app) {
       }
       this.list = true;
     };
+
+    this.getUser = auth.getUser.bind(auth);
+    this.logOut = auth.logOut.bind(auth);
+    this.currentUser = auth.currentUser;
 
   }]);
 };

@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = function(app) {
-  require('./image_controller')(app);
+  require('./image-controller')(app);
+  require('./auth-controller')(app);
 };
