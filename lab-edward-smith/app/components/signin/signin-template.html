@@ -1,0 +1,11 @@
+<form class="form-inline" name="signin" ng-submit="$ctrl.signin($ctrl.user)" ng-show="!$ctrl.getUser()">
+  <label for="email">Email</label>
+  <input type="text" required ng-model="$ctrl.user.email" class="form-control">
+  <label for="password">Password:</label>
+  <input type="password"  class="form-control" required ng-model="$ctrl.user.password">
+  <button class="btn btn-default">Sign In</button>
+</form>
+<form class="form-inline" ng-show="$ctrl.getUser()">
+  <label>{{$ctrl.getUser().username}}</p>
+  <button  class="btn btn-default" ng-click="$ctrl.logOut()">LogOut</button>
+</form>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" ng-if="!ctrl.list">
+      <h1 ng-init="ctrl.getAlbum()">{{ctrl.album.title}}</h1>
+      <h2>{{ctrl.album.description}}</h2>
+      <div class="col-sm-4" ng-repeat="image in ctrl.album.images">
+        <a ng-href="#/{{ctrl.album.id}}/{{image.id}}">
+          <img class="thumbnail" ng-src="{{image.url}}" height="200" width="200">
+          <p>Fullsize: {{image.id}}</p>
+        </a>
+      </div>
+      <button class="btn btn-default col-md-6 col-md-offset-3" ng-click="ctrl.toggle()">List View</button>
+    </div>
+    <div class="col-md-6 col-md-offset-3" ng-if="ctrl.list">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <td>
+              Id
+            </td>
+            <td>
+              Description
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="image in ctrl.album.images">
+            <td>{{image.id}}</td>
+            <td><a ng-href="#/{{ctrl.album.id}}/{{image.id}}">{{image.description}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-default" ng-click="ctrl.toggle()">Thumbnail View</button>
+    </div>
+  </div>
+</div>
